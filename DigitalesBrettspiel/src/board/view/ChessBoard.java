@@ -6,14 +6,10 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import board.model.EdelKarte;
-import board.model.Metall;
-
 public class ChessBoard extends JPanel {
 	GridLayout grid = new GridLayout(8,8);
 	JButton[][] square = new JButton[8][8];
 	Color[] colors = {Color.CYAN, Color.BLUE};
-	EdelKarte krone = new EdelKarte(1234L, "Krone", Metall.Gold, Color.yellow);
 	int kroneX = 2;
 	int kroneY = 4;
 	
@@ -34,6 +30,6 @@ public class ChessBoard extends JPanel {
 				square[j][i].setBackground(colors[(i+j)%2]);
 			}
 		}
-		square[kroneX][kroneY].setBackground(krone.getFarbe());
+		square[kroneX][kroneY].setBackground(Color.yellow);
 	}
 }
